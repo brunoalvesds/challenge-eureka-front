@@ -1,3 +1,13 @@
+@import '../../../assets/_variables.scss';
+
 .main-header {
-    background-color: white;
+    background-color: $main_white;
+    padding: 25px 70px;
+
+    .logo-area {
+        img {
+            height: 36px;
+            width: auto;
+        }
+    }
 }
