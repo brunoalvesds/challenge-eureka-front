@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MembersPage } from './members.component';
+import { TierProgressComponent } from './tier-progress.component';
 
-describe('MembersPage', () => {
-  let component: MembersPage;
-  let fixture: ComponentFixture<MembersPage>;
+describe('TierProgressComponent', () => {
+  let component: TierProgressComponent;
+  let fixture: ComponentFixture<TierProgressComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MembersPage ]
+      declarations: [ TierProgressComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(MembersPage);
+    fixture = TestBed.createComponent(TierProgressComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

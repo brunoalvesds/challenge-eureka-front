@@ -1,0 +1,82 @@
+@import '../../../assets/variables';
+
+.tier {
+    .title-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        div {
+            flex-basis: 50%;
+        }
+
+        .current-plan {
+            font-size: 16px;
+        }
+
+        .next-tier {
+            text-align: right;
+
+            p {
+                display: inline-block;
+                font-size: 12px;
+                font-weight: 600;
+
+                &:first-child {
+                    margin-right: 5px;
+                    color: $light_gray;
+                }
+            }
+
+            .icon-info {
+                display: inline-block;
+                color: $dark_blue;
+                border: 2px solid $dark_blue;
+                height: 14px;
+                width: 14px;
+                border-radius: 50%;
+                font-size: 8px;
+                text-align: center;
+                vertical-align: middle;
+                font-weight: bold;
+                margin-left: 5px;
+            }
+        }
+    }
+
+    .progress {
+        text-align: center;
+
+        figure {
+            margin: 0;
+        }
+
+        .status,
+        .progress-line {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .status {
+            height: 12px;
+            width: 12px;
+            border: 1px solid $secondary_gray;
+            border-radius: 50%;
+            margin: 0 5px;
+
+            &.active {
+                background-image: url('../../../assets/icon-circle-filled-blue.svg');
+                background-repeat: no-repeat;
+                border: 0;
+                width: 16px;
+                height: 16px;
+            }
+        }
+
+        .progress-line {
+            height: 2px;
+            width: calc((100% - 75px) / 5);
+            background-color: $secondary_gray;
+        }
+    }
+}
