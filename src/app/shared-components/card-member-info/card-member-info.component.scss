@@ -4,14 +4,15 @@
     background-color: $main_white;
     padding: 15px;
     border-radius: 8px;
-    height: 385px;
-    overflow: hidden;
+    height: 425px;
+    overflow: auto;
 
     .card-header {
         display: flex;
         justify-content: center;
         flex-direction: column;
         text-align: center;
+        padding: 0 70px;
 
         img {
             border-radius: 50%;
@@ -29,6 +30,7 @@
             color: $light_gray;
             font-size: 12px;
             margin: 5px 0;
+            font-weight: 600;
         }
     }
 
@@ -45,11 +47,15 @@
             display: flex;
             flex-direction: column;
             text-align: center;
+            
+            p,
+            span {
+                font-weight: 600;
+            }
 
             .primary {
                 font-size: 16px;
                 color: $dark_blue;
-                font-weight: 600;
 
                 img, 
                 p {
@@ -59,7 +65,7 @@
 
                 span {
                     color: $light_gray;
-                    font-weight: bold;
+                    font-weight: 600;
                 }
             }
 
@@ -72,9 +78,5 @@
 }
 
 .divider {
-    display: block;
-    height: 1px;
-    width: 100%;
-    background-color: $secondary_gray;
-    margin: 25px 0;
+    margin: 20px 0;
 }

@@ -8,6 +8,7 @@ import { GlobalNavigationComponent } from './shared-components/global-navigation
 import { CardMembersRankingComponent } from './shared-components/card-members-ranking/card-members-ranking.component';
 import { CardMemberInfoComponent } from './shared-components/card-member-info/card-member-info.component';
 import { CardActivityFeedComponent } from './shared-components/card-activity-feed/card-activity-feed.component';
+import { TierProgressComponent } from './shared-components/tier-progress/tier-progress.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CardActivityFeedComponent } from './shared-components/card-activity-fee
     GlobalNavigationComponent,
     CardMembersRankingComponent,
     CardMemberInfoComponent,
-    CardActivityFeedComponent
+    CardActivityFeedComponent,
+    TierProgressComponent
   ],
   imports: [
     BrowserModule,

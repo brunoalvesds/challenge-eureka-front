@@ -4,7 +4,7 @@
     background-color: $main_white;
     padding: 15px;
     border-radius: 8px;
-    height: 385px;
+    height: 425px;
     overflow: hidden;
 
     p {
@@ -37,11 +37,13 @@
 
             .title p {
                 color: $light_gray;
+                font-size: 13px;
+                font-weight: 600;
             }
         }
         
         .members-list {
-            max-height: 310px;
+            max-height: 360px;
             overflow-y: auto;
         }
 
@@ -65,7 +67,8 @@
                 }
 
                 p {
-                    font-weight: bold;
+                   font-size: 13px;
+                   font-weight: 600;
                 }
             }
         }

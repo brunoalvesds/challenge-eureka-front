@@ -1,0 +1,66 @@
+@import '../../../assets/variables';
+
+.card-activity-feed {
+    background-color: $main_white;
+    padding: 15px;
+    border-radius: 8px;
+    height: 425px;
+    overflow: hidden;
+
+    .card-header {
+        .title{
+            font-size: 16px;
+            margin: 0 0 5px 0;
+        }
+
+        .subtitle {
+            margin: 0;
+            font-size: 13px;
+            font-weight: 600;
+            color: $light_gray;
+        }
+    }
+
+    .feed-list {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 0;
+        height: 320px;
+        overflow-y: auto;
+        padding-right: 5px;
+
+        .item {
+            .icon-area,
+            .item-content {
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            .icon-area {
+                margin-right: 12px;
+            }
+
+            .item-content {
+                width: calc(100% - 30px);
+
+                p {
+                    margin: 5px 0;
+                    font-weight: 600;
+                }
+
+                .date {
+                    font-size: 12px;
+                    color: $light_gray;
+                }
+
+                .message {
+                    font-size: 13px;
+                }
+            }
+        }
+
+        .divider {
+            margin: 10px 0;
+        }
+    }
+}
