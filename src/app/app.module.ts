@@ -9,6 +9,7 @@ import { CardMembersRankingComponent } from './shared-components/card-members-ra
 import { CardMemberInfoComponent } from './shared-components/card-member-info/card-member-info.component';
 import { CardActivityFeedComponent } from './shared-components/card-activity-feed/card-activity-feed.component';
 import { TierProgressComponent } from './shared-components/tier-progress/tier-progress.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,9 +23,12 @@ import { TierProgressComponent } from './shared-components/tier-progress/tier-pr
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    HttpClientModule
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
