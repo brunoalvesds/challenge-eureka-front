@@ -14,7 +14,7 @@
         <div class="members-list">
             <div class="member" *ngFor="let member of data; let i = index">
                 <div class="info member-pos">
-                    <p>{{i}}</p>
+                    <p>{{i+1}}</p>
                 </div>
                 <div class="info">
                     <img *ngIf="member.image" src="{{member.image}}" alt="Member Picture">

@@ -16,11 +16,18 @@ export class MembersPage implements OnInit {
     this.usersService.getUsersList().subscribe(
       (response: any) => {
         this.membersList = response;
+        this.sortMembersByPoints(this.membersList);
       },
       error => {
         console.log("error: ", error);
       }
     );
+  }
+
+  sortMembersByPoints(array: any) {
+    array = this.membersList.sort(function(a, b) {
+      return b['balance']['points'] - a['balance']['points'];
+    });
   }
 
 }
