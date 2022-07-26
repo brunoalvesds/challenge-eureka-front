@@ -47,7 +47,7 @@
             display: flex;
             flex-direction: column;
             text-align: center;
-            
+
             p,
             span {
                 font-weight: 600;
@@ -57,7 +57,7 @@
                 font-size: 16px;
                 color: $dark_blue;
 
-                img, 
+                img,
                 p {
                     display: inline-block;
                     margin: 0 2.5px;
@@ -79,4 +79,18 @@
 
 .divider {
     margin: 20px 0;
+}
+
+.member-badges {
+  display: flex;
+  justify-content: space-evenly;
+
+  img {
+    width: 30px;
+    height: 40px;
+
+    &:last-child {
+      height: 48px;
+    }
+  }
 }
