@@ -3,9 +3,9 @@
     <header class="card-header">
       <div class="member-info">
         <img *ngIf="!data.image" src="../../../assets/defaut-profile.png">
-        <img *ngIf="data.image" src="{{ data.image }}" alt="Member profile picture" />
+        <img *ngIf="data.image" src="{{ data.image }}">
         <h3>{{ data.name }}</h3>
-        <p>Sales Incentive Program Contributor</p>
+        <p>{{program.name}}</p>
       </div>
     </header>
     <span class="divider"></span>
@@ -16,7 +16,7 @@
             src="../../assets/icon-intertwinedcircles-blue.svg"
             alt="Points"
           />
-          <p>{{ data.balance.points }}</p>
+          <p>{{ data.balance.points | async }}</p>
         </div>
         <div class="sub">
           <p>Points</p>

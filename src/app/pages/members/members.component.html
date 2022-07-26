@@ -1,8 +1,20 @@
 <app-global-navigation></app-global-navigation>
 <main class="content">
-    <div class="flex-layout">
-        <app-card-members-ranking [data]="membersList" (userSelected)="onUserSelected($event)" class="column"></app-card-members-ranking>
-        <app-card-member-info *ngIf="hasUserSelected" [data]="selectedUserData" class="column"></app-card-member-info>
-        <app-card-activity-feed *ngIf="hasUserSelected" class="column"></app-card-activity-feed>
-    </div>
+  <div class="flex-layout">
+    <app-card-members-ranking
+      [data]="membersList"
+      (userSelected)="onUserSelected($event)"
+      class="column"
+    >
+    </app-card-members-ranking>
+    <app-card-member-info
+      *ngIf="hasUserSelected"
+      [data]="selectedUserData"
+      [program]="userProgramData"
+      class="column"
+    >
+    </app-card-member-info>
+    <app-card-activity-feed *ngIf="hasUserSelected" class="column">
+    </app-card-activity-feed>
+  </div>
 </main>

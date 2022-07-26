@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth/auth.service';
+import { ProgramsService } from 'src/app/services/programs/programs.service';
 import { UsersService } from 'src/app/services/users/users.service';
 
 @Component({
@@ -11,8 +12,9 @@ export class MembersPage implements OnInit {
   membersList = [];
   hasUserSelected: boolean = false;
   selectedUserData: Array<any> = [];
+  userProgramData: Array<any> = [];
 
-  constructor(private usersService: UsersService) { }
+  constructor(private usersService: UsersService, private programsService: ProgramsService) { }
 
   ngOnInit(): void {
     this.usersService.getUsersList().subscribe(
@@ -39,8 +41,16 @@ export class MembersPage implements OnInit {
       (response: any) => {
         console.log("res: ", response);
         this.selectedUserData = response;
+
+        this.programsService.getUserProgram(response.programId).subscribe(
+          (response: any) => {
+            this.userProgramData = response;
+          }
+        );
       }
-    )
+    );
+
+
   }
 
 }
