@@ -13,6 +13,7 @@ export class MembersPage implements OnInit {
   hasUserSelected: boolean = false;
   selectedUserData: Array<any> = [];
   userProgramData: Array<any> = [];
+  userActivityData: Array<any> = [];
 
   constructor(private usersService: UsersService, private programsService: ProgramsService) { }
 
@@ -47,6 +48,19 @@ export class MembersPage implements OnInit {
             this.userProgramData = response;
           }
         );
+      },
+      error => {
+        console.log("Error at /users endpoit: ", error);
+      }
+    );
+
+    this.usersService.getUserActivity(event.userId).subscribe(
+      (response: any) => {
+        console.log("act: ", response);
+        this.userActivityData = response;
+      },
+      error => {
+        console.log("Error at /users/id/activities endpoit: ", error);
       }
     );
 

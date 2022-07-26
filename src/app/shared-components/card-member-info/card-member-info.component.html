@@ -2,10 +2,10 @@
   <ng-container *ngIf="data">
     <header class="card-header">
       <div class="member-info">
-        <img *ngIf="!data.image" src="../../../assets/defaut-profile.png">
-        <img *ngIf="data.image" src="{{ data.image }}">
+        <img *ngIf="!data.image" src="../../../assets/defaut-profile.png" />
+        <img *ngIf="data.image" src="{{ data.image }}" />
         <h3>{{ data.name }}</h3>
-        <p>{{program.name}}</p>
+        <p>{{ program.name }}</p>
       </div>
     </header>
     <span class="divider"></span>
@@ -16,7 +16,7 @@
             src="../../assets/icon-intertwinedcircles-blue.svg"
             alt="Points"
           />
-          <p>{{ data.balance.points | async }}</p>
+          <p>{{ data.balance.points }}</p>
         </div>
         <div class="sub">
           <p>Points</p>
@@ -44,12 +44,12 @@
     <app-tier-progress></app-tier-progress>
     <span class="divider"></span>
     <div class="member-badges">
-      <img src="../../../assets/badge-1.svg" alt="Badge 1">
-      <img src="../../../assets/badge-2.svg" alt="Badge 2">
-      <img src="../../../assets/badge-3.svg" alt="Badge 3">
-      <img src="../../../assets/badge-4.svg" alt="Badge 4">
-      <img src="../../../assets/badge-5.svg" alt="Badge 5">
-      <img src="../../../assets/badge-6.svg" alt="Badge 6">
+      <img src="../../../assets/badge-1.svg" alt="Badge 1" />
+      <img src="../../../assets/badge-2.svg" alt="Badge 2" />
+      <img src="../../../assets/badge-3.svg" alt="Badge 3" />
+      <img src="../../../assets/badge-4.svg" alt="Badge 4" />
+      <img src="../../../assets/badge-5.svg" alt="Badge 5" />
+      <img src="../../../assets/badge-6.svg" alt="Badge 6" />
     </div>
   </ng-container>
 </div>

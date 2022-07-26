@@ -1,35 +1,38 @@
 <div class="card-members-ranking">
-    <div class="content">
-        <header class="card-header">
-            <div class="title">
-                <p>Pos.</p>
+  <div class="content">
+    <header class="card-header">
+      <div class="title">
+        <p>Pos.</p>
+      </div>
+      <div class="title">
+        <p>Member</p>
+      </div>
+      <div class="title">
+        <p>Points</p>
+      </div>
+    </header>
+    <div class="members-list">
+      <ng-container *ngFor="let member of data; let i = index">
+        <div class="member" (click)="toggleUserData(member.id)">
+          <div class="info member-pos">
+            <p>{{ i + 1 }}</p>
+          </div>
+          <div class="info">
+            <img *ngIf="member.image" src="{{ member.image }}" />
+            <img
+              *ngIf="!member.image"
+              src="../../../assets/defaut-profile.png"
+            />
+            <div class="member-name">
+              <p>{{ member.name }}</p>
             </div>
-            <div class="title">
-                <p>Member</p>
-            </div>
-            <div class="title">
-                <p>Points</p>
-            </div>
-        </header>
-        <div class="members-list">
-          <ng-container *ngFor="let member of data; let i = index">
-            <div class="member" (click)="toggleUserData(member.id)">
-              <div class="info member-pos">
-                  <p>{{i+1}}</p>
-              </div>
-              <div class="info">
-                  <img *ngIf="member.image" src="{{member.image}}">
-                  <img *ngIf="!member.image" src="../../../assets/defaut-profile.png">
-                  <div class="member-name">
-                      <p>{{member.name}}</p>
-                  </div>
-              </div>
+          </div>
 
-              <div class="info member-points">
-                  <p>{{member.balance.points}}</p>
-              </div>
-            </div>
-          </ng-container>
+          <div class="info member-points">
+            <p>{{ member.balance.points }}</p>
+          </div>
         </div>
+      </ng-container>
     </div>
+  </div>
 </div>

@@ -8,10 +8,13 @@ import { AuthService } from '../auth/auth.service';
 export class UsersService {
   token: any = "";
   apiUrl: string = "https://challenge-fielo.herokuapp.com";
+  headers = new HttpHeaders();
 
   constructor(private http: HttpClient) {
     this.token = sessionStorage.getItem("TOKEN");
     this.getUsersList();
+
+    this.headers.append('x-access-token', this.token);
   }
 
   getUsersList() {
@@ -34,7 +37,13 @@ export class UsersService {
     return this.http.get(apiPath, {headers});
   }
 
-  getUserActivity() {
-
+  getUserActivity(userId: string) {
+    const apiPath = `${this.apiUrl}/users/${userId}/activities`;
+    let headers = new HttpHeaders(
+      {
+        'x-access-token': this.token
+      }
+    );
+    return this.http.get(apiPath, {headers});
   }
 }

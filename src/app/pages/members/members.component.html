@@ -14,7 +14,11 @@
       class="column"
     >
     </app-card-member-info>
-    <app-card-activity-feed *ngIf="hasUserSelected" class="column">
+    <app-card-activity-feed
+      *ngIf="hasUserSelected"
+      [data]="userActivityData"
+      class="column"
+    >
     </app-card-activity-feed>
   </div>
 </main>
