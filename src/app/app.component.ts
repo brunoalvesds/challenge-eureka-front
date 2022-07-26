@@ -17,7 +17,7 @@ export class AppComponent {
     this.authService.authentication().subscribe(
       (response: any) => {
         if(response.auth === true) {
-          sessionStorage.setItem("TOKEN", response.token);
+          localStorage.setItem("TOKEN", response.token);
         } else {
           console.log("Not authorized.");
         }

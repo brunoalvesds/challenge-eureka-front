@@ -9,7 +9,7 @@ export class ProgramsService {
   apiUrl: string = "https://challenge-fielo.herokuapp.com";
 
   constructor(private http: HttpClient) {
-    this.token = sessionStorage.getItem("TOKEN");
+    this.token = localStorage.getItem("TOKEN");
   }
 
   getUserProgram(programId: string) {

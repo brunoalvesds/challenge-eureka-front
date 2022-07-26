@@ -10,8 +10,7 @@ export class UsersService {
   apiUrl: string = "https://challenge-fielo.herokuapp.com";
 
   constructor(private http: HttpClient) {
-    this.token = sessionStorage.getItem("TOKEN");
-    this.getUsersList();
+    this.token = localStorage.getItem("TOKEN");
   }
 
   getUsersList() {

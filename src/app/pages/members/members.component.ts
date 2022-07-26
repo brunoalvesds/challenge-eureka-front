@@ -19,7 +19,8 @@ export class MembersPage implements OnInit {
   isLoading: boolean = false;
 
   constructor(
-    private usersService: UsersService, private programsService: ProgramsService, private bingService: BingService) { }
+    private usersService: UsersService, private programsService: ProgramsService, private bingService: BingService,
+    private authService: AuthService) { }
 
   ngOnInit(): void {
     //Active loader
@@ -36,7 +37,13 @@ export class MembersPage implements OnInit {
       }
     );
 
-    //And now we call service and list users
+    setTimeout(() => {
+      this.getMembersList();
+    }, 1000);
+  }
+
+  getMembersList() {
+    //Here we call service and list users
     this.usersService.getUsersList().subscribe(
       (response: any) => {
         this.isLoading = false;
