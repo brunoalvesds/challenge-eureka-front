@@ -24,8 +24,14 @@ export class UsersService {
     return this.http.get(apiPath, {headers});
   }
 
-  getUserById() {
-
+  getUserById(userId: string) {
+    const apiPath = `${this.apiUrl}/users/${userId}`;
+    let headers = new HttpHeaders(
+      {
+        'x-access-token': this.token
+      }
+    );
+    return this.http.get(apiPath, {headers});
   }
 
   getUserActivity() {

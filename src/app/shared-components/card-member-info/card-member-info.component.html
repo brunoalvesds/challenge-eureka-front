@@ -1,41 +1,47 @@
 <div class="card-member-info">
+  <ng-container *ngIf="data">
     <header class="card-header">
-        <div class="member-info">
-            <img src="https://preview.keenthemes.com/conquer/assets/img/profile/profile-img.png" alt="Member profile picture">
-            <h3>Cameron Williamson</h3>
-            <p>Sales Incentive Program Contributor</p>
-        </div>
+      <div class="member-info">
+        <img *ngIf="!data.image" src="../../../assets/defaut-profile.png">
+        <img *ngIf="data.image" src="{{ data.image }}" alt="Member profile picture" />
+        <h3>{{ data.name }}</h3>
+        <p>Sales Incentive Program Contributor</p>
+      </div>
     </header>
     <span class="divider"></span>
     <div class="member-numbers">
-        <div class="item">
-            <div class="primary">
-                <img src="../../assets/icon-intertwinedcircles-blue.svg" alt="Points">
-                <p>1540</p>
-            </div>
-            <div class="sub">
-                <p>Points</p>
-            </div>
+      <div class="item">
+        <div class="primary">
+          <img
+            src="../../assets/icon-intertwinedcircles-blue.svg"
+            alt="Points"
+          />
+          <p>{{ data.balance.points }}</p>
         </div>
-        <div class="item">
-            <div class="primary">
-                <p>10450</p>
-            </div>
-            <div class="sub">
-                <p>Miles</p>
-            </div>
+        <div class="sub">
+          <p>Points</p>
         </div>
-        <div class="item">
-            <div class="primary">
-                <span>$</span>
-                <p>350</p>
-            </div>
-            <div class="sub">
-                <p>Currency</p>
-            </div>
+      </div>
+      <div class="item">
+        <div class="primary">
+          <p>{{ data.balance.miles }}</p>
         </div>
+        <div class="sub">
+          <p>Miles</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="primary">
+          <span>$</span>
+          <p>{{ data.balance.currency | number: "1.0-0" }}</p>
+        </div>
+        <div class="sub">
+          <p>Currency</p>
+        </div>
+      </div>
     </div>
     <span class="divider"></span>
     <app-tier-progress></app-tier-progress>
     <span class="divider"></span>
+  </ng-container>
 </div>

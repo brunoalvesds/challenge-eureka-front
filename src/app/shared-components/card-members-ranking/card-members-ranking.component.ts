@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-card-members-ranking',
@@ -8,10 +8,15 @@ import { Component, Input, OnInit } from '@angular/core';
 
 export class CardMembersRankingComponent implements OnInit {
   @Input() data: Array<any> = [];
+  @Output() userSelected = new EventEmitter<{ userId: string }>();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  toggleUserData(userId: string) {
+    this.userSelected.emit({ userId: userId });
+    console.log("User ID: ", userId);
+  }
 }

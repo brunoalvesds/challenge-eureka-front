@@ -16,17 +16,17 @@
         .member .info {
             display: inline-block;
             vertical-align: middle;
-            
+
             &:nth-child(1),
             &:nth-child(3) {
                 width: 60px;
                 text-align: center;
             }
-            
+
             &:nth-child(1) {
                 width: 40px
             }
-        
+
             &:nth-child(2) {
                 width: calc(100% - 100px);
             }
@@ -41,36 +41,37 @@
                 font-weight: 600;
             }
         }
-        
+
         .members-list {
             max-height: 360px;
             overflow-y: auto;
         }
 
         .member {
-            margin-bottom: 10px;
+          cursor: pointer;
+          margin-bottom: 10px;
 
-            .info {
-                display: inline-block;
+          .info {
+              display: inline-block;
 
-                img, 
-                .member-name {
-                    display: inline-block;
-                }
+              img,
+              .member-name {
+                  display: inline-block;
+              }
 
-                img {
-                    width: 25px;
-                    height: 25px;
-                    border-radius: 50%;
-                    margin-right: 10px;
-                    vertical-align: middle;
-                }
+              img {
+                  width: 25px;
+                  height: 25px;
+                  border-radius: 50%;
+                  margin-right: 10px;
+                  vertical-align: middle;
+              }
 
-                p {
-                   font-size: 13px;
-                   font-weight: 600;
-                }
-            }
+              p {
+                  font-size: 13px;
+                  font-weight: 600;
+              }
+          }
         }
     }
 }

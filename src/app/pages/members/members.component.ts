@@ -9,6 +9,8 @@ import { UsersService } from 'src/app/services/users/users.service';
 })
 export class MembersPage implements OnInit {
   membersList = [];
+  hasUserSelected: boolean = false;
+  selectedUserData: Array<any> = [];
 
   constructor(private usersService: UsersService) { }
 
@@ -28,6 +30,17 @@ export class MembersPage implements OnInit {
     array = this.membersList.sort(function(a, b) {
       return b['balance']['points'] - a['balance']['points'];
     });
+  }
+
+  onUserSelected(event: any) {
+    this.hasUserSelected = true;
+    console.log("event ", event);
+    this.usersService.getUserById(event.userId).subscribe(
+      (response: any) => {
+        console.log("res: ", response);
+        this.selectedUserData = response;
+      }
+    )
   }
 
 }
