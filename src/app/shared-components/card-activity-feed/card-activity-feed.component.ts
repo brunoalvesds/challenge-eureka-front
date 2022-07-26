@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./card-activity-feed.component.scss']
 })
 export class CardActivityFeedComponent implements OnInit {
-  @Input() data: any = {};
+  @Input() data: any = [];
 
   constructor() { }
 
