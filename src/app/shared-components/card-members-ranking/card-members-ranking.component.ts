@@ -17,6 +17,5 @@ export class CardMembersRankingComponent implements OnInit {
 
   toggleUserData(userId: string) {
     this.userSelected.emit({ userId: userId });
-    console.log("User ID: ", userId);
   }
 }

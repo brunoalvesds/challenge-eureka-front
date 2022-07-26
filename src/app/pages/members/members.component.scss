@@ -1,6 +1,8 @@
 .content {
   padding: 60px;
-  background: #3fd7fd;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
 }
 
 .flex-layout {
@@ -22,7 +24,7 @@
     align-items: flex-start;
 
     .column {
-      flex-basis: calc(50% - 25px);
+      flex-basis: calc(50% - 50px);
       margin-bottom: 25px;
     }
   }

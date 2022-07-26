@@ -8,13 +8,10 @@ import { AuthService } from '../auth/auth.service';
 export class UsersService {
   token: any = "";
   apiUrl: string = "https://challenge-fielo.herokuapp.com";
-  headers = new HttpHeaders();
 
   constructor(private http: HttpClient) {
     this.token = sessionStorage.getItem("TOKEN");
     this.getUsersList();
-
-    this.headers.append('x-access-token', this.token);
   }
 
   getUsersList() {

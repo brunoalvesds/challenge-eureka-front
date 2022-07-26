@@ -13,6 +13,7 @@ export class AppComponent {
   constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
+    //First, the authentication service is called and token is set
     this.authService.authentication().subscribe(
       (response: any) => {
         if(response.auth === true) {

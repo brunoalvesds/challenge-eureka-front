@@ -12,8 +12,8 @@ export class AuthService {
     const apiUrl = "https://challenge-fielo.herokuapp.com/auth";
     const headers = new HttpHeaders(
       {
-        'Content-Type':'application/json; charset=utf-8',
-        'x-app-id': 'MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCh7uxHjWd1CyRgPD4XHcIPKiDb'
+        'x-app-id': 'MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCh7uxHjWd1CyRgPD4XHcIPKiDb',
+        'Content-Type':'application/json; charset=utf-8'
       }
     );
 

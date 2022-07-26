@@ -11,7 +11,7 @@
         <p>Points</p>
       </div>
     </header>
-    <div class="members-list">
+    <div class="members-list" *ngIf="data">
       <ng-container *ngFor="let member of data; let i = index">
         <div class="member" (click)="toggleUserData(member.id)">
           <div class="info member-pos">
