@@ -52,7 +52,8 @@ export class MembersPage implements OnInit {
       },
       error => {
         this.isLoading = false;
-        console.log("error: ", error);
+        console.log("Error at get users list: ", error);
+        location.reload();
       }
     );
   }
